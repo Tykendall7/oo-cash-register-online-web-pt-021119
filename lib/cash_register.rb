@@ -4,13 +4,14 @@ attr_accessor :discount, :total, :items
 def initialize (discount=0)
   @total=0
   @discount=discount
+  @items= []
 end
 
 def add_item (title, price, quantity=1)
   total_price= price*quantity
   self.total += total_price
   quantity.times do
-    @items << title
+    items << title
   end
 
 end
